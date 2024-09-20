@@ -1,16 +1,17 @@
-class uni:
+class univar:
+    quan=[]
     qual=[]
-    quan=[]  
     def __init__(self,dataset):
         self.dataset=dataset
     def quanqual(self):
-        for colname in self.dataset.columns:
-            if(self.dataset[colname].dtype=='O'):
-                self.qual.append(colname)
+        for cname in self.dataset.columns:
+            if(self.dataset[cname].dtype=='O'):
+                self.qual.append(cname)
             else:
-                self.quan.append(colname)
+                self.quan.append(cname)             
         return self.qual,self.quan
-
-
-        
+                
+                
+                
+    
     
